@@ -55,5 +55,5 @@ def contact():
 
 if __name__ == "__main__":
     app.secret_key = 'your_secret_key'  # Required for flash messages
-    app.run(debug=True, port=8001)
+    app.run()
 
