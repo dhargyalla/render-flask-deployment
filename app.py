@@ -1,4 +1,4 @@
-from flask_bootstrap import Bootstrap4
+from flask_bootstrap import Bootstrap
 from flask import Flask, render_template,request, redirect, flash
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
@@ -20,7 +20,7 @@ app.config['MAIL_RECIPIENT'] = os.getenv('MAIL_RECIPIENT')
 
 
 mail = Mail(app)
-bootstrap = Bootstrap4(app)
+bootstrap = Bootstrap(app)
 
 @app.route("/", methods=['GET'])
 def home():
