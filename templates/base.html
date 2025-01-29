@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    {% block styles %}
+    <!-- Load Bootstrap-Flask CSS here -->
+    {{ bootstrap.load_css() }}
+     <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href=" {{ url_for('static', filename='assets/css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    {% endblock %}
+
+    <title>{% block title %}My Website{% endblock %}</title>
+</head>
+<body>
+  <!-- Include the header -->
+  {% include 'header.html' %}
+
+  <!-- Content Block -->
+  {% block content %}
+  <!-- Page-specific content will go here -->
+
+  {% endblock %}
+
+  <!-- Include the footer -->
+  {% include 'footer.html' %}
+
+  {% block scripts %}
+  <!-- Optional JavaScript -->
+  {{ bootstrap.load_js() }}
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+  <!-- Link JavaScript -->
+  <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+  {% endblock %}
+</body>
+</html>
