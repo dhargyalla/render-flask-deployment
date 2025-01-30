@@ -4,32 +4,36 @@
 
 {% block content %}
 
-<section class="pt-5 pt-md-11 py-3 pt-5">
+<section class="pt-5 pt-md-11 py-3">
   <div class="container pt-5">
     <div class="row gx-4 gx-lg-5 mt-5 align-items-center">
       <div class="col-12 col-md-5 order-md-2">
         <!-- Form -->
-        <form style="width: w-100;" action="/contact" method="POST">
-          <!-- Name input -->
-          <div data-mdb-input-init class="form-outline mb-4">
-            <input type="text" id="form4Example1" name="name" class="form-control" required />
-            <label class="form-label" for="form4Example1">Name</label>
-          </div>
+        <div class="px-3 py-4"> <!-- Responsive padding -->
+          <form class="w-100" action="/contact" method="POST">
+            <!-- Name input -->
+            <div class="form-outline mb-3">
+              <input type="text" id="form4Example1" name="name" class="form-control" required />
+              <label class="form-label" for="form4Example1">Name</label>
+            </div>
 
-          <!-- Email input -->
-          <div data-mdb-input-init class="form-outline mb-4">
-            <input type="email" id="form4Example2" name="email" class="form-control" required />
-            <label class="form-label" for="form4Example2">Email address</label>
-          </div>
+            <!-- Email input -->
+            <div class="form-outline mb-3">
+              <input type="email" id="form4Example2" name="email" class="form-control" required />
+              <label class="form-label" for="form4Example2">Email address</label>
+            </div>
 
-          <!-- Message input -->
-          <div data-mdb-input-init class="form-outline mb-4">
-            <textarea class="form-control" id="form4Example3" name="message" rows="4" required></textarea>
-            <label class="form-label" for="form4Example3">Message</label>
-          </div>
-          <!-- Submit button -->
-          <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block mb-4">Send</button>
-        </form>
+            <!-- Message input -->
+            <div class="form-outline mb-3">
+              <textarea class="form-control" id="form4Example3" name="message" rows="4" required></textarea>
+              <label class="form-label" for="form4Example3">Message</label>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+          </form>
+        </div>
+
         {% with messages = get_flashed_messages(with_categories=true) %}
           {% if messages %}
             {% for category, message in messages %}
@@ -39,11 +43,9 @@
             {% endfor %}
           {% endif %}
         {% endwith %}
-
-
       </div>
-      <div class="col-12 col-md-7 order-md-1">
-        <!-- Contact Info -->
+
+      <div class="col-12 col-md-7 order-md-1 text-center text-md-left">
         <h1>Contact me!</h1>
         <p>
           Welcome to my contact page! Whether you have questions, ideas to share,
@@ -52,20 +54,23 @@
           discussing exciting projects, collaborations, or any feedback you may have.
           Let’s connect and create something amazing together!
         </p>
-        <h5>Get in touch with me </h5>
+        <h5>Get in touch with me</h5>
+
         <!-- Social Media Links -->
-        <a class="btn btn-primary" style="background-color: #3b5998;" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-        <a class="btn btn-primary" style="background-color: #55acee;" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-        <a class="btn btn-primary" style="background-color: #dd4b39;" href="#!" role="button"><i class="fab fa-google"></i></a>
-        <a class="btn btn-primary" style="background-color: #ac2bac;" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-        <a class="btn btn-primary" style="background-color: #0082ca;" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-        <a class="btn btn-primary" style="background-color: #ed302f;" href="#!" role="button"><i class="fab fa-youtube"></i></a>
-        <a class="btn btn-primary" style="background-color: #481449;" href="#!" role="button"><i class="fab fa-slack-hash"></i></a>
-        <a class="btn btn-primary" style="background-color: #333333;" href="#!" role="button"><i class="fab fa-github"></i></a>
-        <a class="btn btn-primary" style="background-color: #25d366;" href="#!" role="button"><i class="fab fa-whatsapp"></i></a>
+        <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
+          <a class="btn btn-primary m-1" style="background-color: #3b5998;" href="#"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-primary m-1" style="background-color: #55acee;" href="#"><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-primary m-1" style="background-color: #dd4b39;" href="#"><i class="fab fa-google"></i></a>
+          <a class="btn btn-primary m-1" style="background-color: #ac2bac;" href="#"><i class="fab fa-instagram"></i></a>
+          <a class="btn btn-primary m-1" style="background-color: #0082ca;" href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-primary m-1" style="background-color: #ed302f;" href="#"><i class="fab fa-youtube"></i></a>
+          <a class="btn btn-primary m-1" style="background-color: #481449;" href="#"><i class="fab fa-slack-hash"></i></a>
+          <a class="btn btn-primary m-1" style="background-color: #333333;" href="#"><i class="fab fa-github"></i></a>
+          <a class="btn btn-primary m-1" style="background-color: #25d366;" href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
       </div>
-    </div> <!-- / .row -->
-  </div> <!-- / .container -->
+    </div>
+  </div>
 </section>
 
 
