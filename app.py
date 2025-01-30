@@ -1,4 +1,4 @@
-from flask_bootstrap import Bootstrap
+from flask_bootstrap import Bootstrap4
 from flask import Flask, render_template,request, redirect, flash
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
@@ -20,7 +20,7 @@ app.config['MAIL_RECIPIENT'] = os.getenv('MAIL_RECIPIENT')
 
 
 mail = Mail(app)
-bootstrap = Bootstrap(app)
+bootstrap = Bootstrap4(app)
 
 @app.route("/", methods=['GET'])
 def home():
@@ -55,5 +55,4 @@ def contact():
 
 if __name__ == "__main__":
     app.secret_key = 'your_secret_key'  # Required for flash messages
-    app.run()
-
+    app.run(debug=True)
