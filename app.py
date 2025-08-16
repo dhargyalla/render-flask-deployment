@@ -34,6 +34,10 @@ def about():
 def portfolio():
     return render_template('portfolio.html')
 
+@app.route("/project1", methods=['GET'])
+def project1():
+    return render_template('project1.html')
+
 @app.route("/contact", methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
