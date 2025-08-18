@@ -16,7 +16,9 @@ app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
 app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
 app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER')
 app.config['MAIL_RECIPIENT'] = os.getenv('MAIL_RECIPIENT')
-app.config['MAIL_RECIPIENT'] = os.getenv('MAIL_RECIPIENT')
+
+# Secret key for flash messages
+app.secret_key = os.getenv("FLASK_SECRET_KEY", "change-me")
 
 
 mail = Mail(app)
