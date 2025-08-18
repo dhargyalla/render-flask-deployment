@@ -1,4 +1,5 @@
-from flask_bootstrap import Bootstrap4
+# from flask_bootstrap import Bootstrap4
+from flask_bootstrap import Bootstrap5
 from flask import Flask, render_template,request, redirect, flash
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
@@ -22,7 +23,8 @@ app.secret_key = os.getenv("FLASK_SECRET_KEY", "change-me")
 
 
 mail = Mail(app)
-bootstrap = Bootstrap4(app)
+# bootstrap = Bootstrap4(app)
+bootstrap = Bootstrap5(app)
 
 @app.route("/", methods=['GET'])
 def home():
