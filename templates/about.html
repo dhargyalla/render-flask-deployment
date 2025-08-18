@@ -4,40 +4,53 @@
 
 {% block content %}
 
+<section class="pt-5 pt-md-11 py-3">
+  <div class="container pt-5">
+    <div class="row gx-4 gx-lg-5 mt-5 align-items-center">
 
+      <!-- Profile Image -->
+      <div class="col-12 col-md-5 order-md-2">
+        <img src="static/assets/img/profile.jpg" class="img-fluid mb-3 mb-md-0" alt="Profile Picture">
+      </div>
 
-<section class="pt-5 pt-md-11 py-3 pt-5 ">  <!-- About section -->
-      <div class="container pt-5">
-            <div class="row gx-4 gx-lg-5 mt-5 align-items-center">
-              <div class="col-12 col-md-5 order-md-2">
-                <!-- Image -->
-                <img src="static/assets/img/profile.jpg" class="img-fluid mb-3 mb-md-0" alt="...">
-              </div>
-              <div class="col-12 col-md-7 order-md-1">
-                <!-- Text -->
-                <h1>About.</h1>
-					<p class="intro">I'm a product designer based in London, UK.</p>
-					<p class="description">Since 2016, I've enjoyed turning complex problems into simple,
-                      beautiful and intuitive designs. When I'm not pushing pixels, you'll find me cooking,
-                      gardening or working out in the park.</p>
-                <h3>My skill sets</h3>
-                <div class="progress mb-4">
-                  <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">AutoCAD</div>
-                </div>
-                <div class="progress mb-4">
-                  <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">CAD</div>
-                </div>
-                <div class="progress mb-4">
-                  <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">MATLAB</div>
-                </div>
-                <div class="progress mb-4">
-                  <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Python</div>
-                </div>
-                <a class="btn btn-outline-secondary" href="#">Resume</a><br><br>
-              </div>
-            </div> <!-- / .row -->
-      </div> <!-- / .container -->
+      <!-- About Text and Skills -->
+      <div class="col-12 col-md-7 order-md-1">
+        <h1>About.</h1>
+        <p class="intro">I'm a Data Analyst & Data Engineer passionate about transforming data into actionable insights.</p>
+        <p class="description">
+          Experienced in building scalable data pipelines, performing advanced analytics, and deploying machine learning solutions.
+          Skilled in Python, SQL, cloud technologies, and data visualization.
+        </p>
+
+        <h3>Technical Skills</h3>
+
+        <!-- Progress Bars for Skills -->
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Python</div>
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">SQL</div>
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Pandas / NumPy</div>
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Data Engineering (ETL, Airflow)</div>
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">Machine Learning</div>
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-secondary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">Cloud Platforms (AWS/GCP)</div>
+        </div>
+
+        <a class="btn btn-outline-secondary mt-3" href="#">Resume</a>
+      </div>
+
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
 </section>
+
 
 <section style="background-color: #F0F2F5;">
   <div class="container py-5">
@@ -47,7 +60,7 @@
         <div class="card">
           <div class="card-body p-4">
             <div class="site-heading">
-                  <h3 class="display-6 fw-bold">Senior product design engineer</h3>
+                  <h3 class="fw-bold">Senior product design engineer</h3>
                   <span class="subheading fs-5">Google, 2022-present</span><br><br>
             </div>
             <p class="mb-0">A Product Design Engineer is responsible for designing,
@@ -61,7 +74,7 @@
         <div class="card">
           <div class="card-body p-4">
             <div class="site-heading">
-                  <h3 class="display-6 fw-bold">Design monitoring assistant</h3>
+                  <h3 class=" fw-bold">Design monitoring assistant</h3>
                   <span class="subheading fs-5">Marcede Benz, 2018</span><br><br>
             </div>
             <p class="mb-0">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto
@@ -74,7 +87,7 @@
         <div class="card">
           <div class="card-body p-4">
             <div class="site-heading">
-                  <h3 class="display-6 fw-bold">Design monitoring assistant</h3>
+                  <h3 class="fw-bold">Design monitoring assistant</h3>
                   <span class="subheading fs-5">Marcede Benz, 2018</span><br><br>
             </div>
             <p class="mb-0">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto
@@ -87,7 +100,7 @@
         <div class="card">
           <div class="card-body p-4">
             <div class="site-heading">
-                  <h3 class="display-6 fw-bold">Design monitoring assistant</h3>
+                  <h3 class="fw-bold">Design monitoring assistant</h3>
                   <span class="subheading fs-5">Marcede Benz, 2018</span><br><br>
             </div>
             <p class="mb-0">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto
@@ -100,7 +113,7 @@
         <div class="card">
           <div class="card-body p-4">
             <div class="site-heading">
-                  <h3 class="display-6 fw-bold">Design monitoring assistant</h3>
+                  <h3 class="fw-bold">Design monitoring assistant</h3>
                   <span class="subheading fs-5">Marcede Benz, 2018</span><br><br>
             </div>
             <p class="mb-0">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto
@@ -113,7 +126,7 @@
         <div class="card">
           <div class="card-body p-4">
             <div class="site-heading">
-                  <h3 class="display-6 fw-bold">Design monitoring assistant</h3>
+                  <h3 class="fw-bold">Design monitoring assistant</h3>
                   <span class="subheading fs-5">Marcede Benz, 2018</span><br><br>
             </div>
             <p class="mb-0">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto
