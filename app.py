@@ -51,7 +51,9 @@ def contact():
 
         msg = Message(
             subject=f"Contact Form Submission from {name}",
-            recipients=[os.getenv('MAIL_RECIPIENT')],  # Use value from .env file
+            # use app.config instead of os.getenv
+            sender=app.config["MAIL_DEFAULT_SENDER"],
+            recipients=[app.config["MAIL_RECIPIENT"]],
             body=f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
         )
         mail.send(msg)
