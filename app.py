@@ -49,6 +49,10 @@ def contact():
         email = request.form['email']
         message = request.form['message']
 
+        # Debug: log sender and recipient
+        print("DEBUG: MAIL_DEFAULT_SENDER =", app.config.get("MAIL_DEFAULT_SENDER"))
+        print("DEBUG: MAIL_RECIPIENT =", app.config.get("MAIL_RECIPIENT"))
+
         msg = Message(
             subject=f"Contact Form Submission from {name}",
             # use app.config instead of os.getenv
