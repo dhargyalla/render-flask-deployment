@@ -42,6 +42,10 @@ def portfolio():
 def project1():
     return render_template('project1.html')
 
+@app.route("/webdev", methods=['GET'])
+def webapp():
+    return render_template('webdev.html')
+
 @app.route("/contact", methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
