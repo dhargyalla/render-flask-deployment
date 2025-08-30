@@ -1,131 +1,104 @@
 {% extends 'base.html' %}
 
-{% block title %} Project 1 {% endblock %}
+{% block title %} Coffee and Wifi{% endblock %}
 
 {% block content %}
 
-
-
-<section class="pt-5 pt-md-11 py-3 pt-5 ">  <!-- About section -->
+<section class="pt-5 pt-md-11 py-3 pt-5 ">  <!-- blog title section -->
       <div class="container pt-5">
-            <div class="row gx-4 gx-lg-5 mt-5 align-items-center">
-              <div class="col-12 col-md-5 order-md-2">
-                <!-- Image -->
-                <img src="static/assets/img/portfolio-design.jpeg" class="img-fluid mb-3 mb-md-0" alt="...">
+            <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+              <div class="col-md-6 px-0">
+                <h1 class="display-4 font-italic">Wifi and Cafe Finder</h1>
+                <p class="lead my-3">
+                  This website is very helpful for people who work from home. Visitors can
+                  find cafés listed with details such as the number of sockets,
+                  available tables, and the café’s location.
+                </p>
               </div>
-              <div class="col-12 col-md-7 order-md-1">
-                <!-- Text -->
-                <h1>Project 1</h1>
-					<h5>Check out some of my latest product design case studies.</h5>
-					<p>I’ve worked for startups, agencies,
-                        corporations and have led projects to design products
-                        used by millions of people. Product design in mechanical engineering involves
-                        the systematic development of functional, manufacturable, and cost-effective products.
-                        It combines engineering principles, creativity, and technical knowledge to create
-                        solutions that meet user and industry requirements.</p>
-                <a class="btn btn-outline-secondary" href="/add_cafe">Resume</a><br><br>
-              </div>
-            </div> <!-- / .row -->
+            </div>
       </div> <!-- / .container -->
 </section>
 
 <section>
-    <div class="album py-5 bg-light">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="static/assets/img/product-engine.JPG" class="card-img-top" alt="Thumbnail">
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <a class="btn btn-sm btn-outline-secondary" href="/project1">View</a>
-                    <a class="btn btn-sm btn-outline-secondary" href="/project1">View</a>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <div class="blog-post">
+            <h2 class="blog-post-title">Project Overview</h2>
+            <p class="blog-post-meta">January 12, 2024 by Tsering</p>
+            <hr>
+            <p>
+              This project is a web application designed for remote workers and students looking
+              for work-from-home friendly cafés. It helps users easily discover coffee shops
+              with reliable Wi-Fi, available seating, and essential amenities to create a
+              productive work environment outside the home.
+            </p>
+            <h3>Tech Stack</h3>
+            <ul>
+              <li>Backend: Flask (Python)</li>
+              <li>Frontend: Bootstrap (responsive UI)</li>
+              <li>Database: SQL (SQLite during development)</li>
+              <li>Extras: Jinja templates, simple slugged URLs for SEO-friendly links</li>
+            </ul>
+            <h3>Modular Architecture</h3>
+            <ul>
+              <li>app.py – main application file that defines routes.</li>
+              <li>templates/ – contains HTML files (index.html, about.html,
+                portfolio.html, project1.html, etc.) with reusable layouts
+                (header.html, footer.html, base.html).</li>
+              <li>static/ – contains CSS, JS, and images for styling.</li>
+              <li>.env – stores environment variables.</li>
+              <li>requirements.txt – lists dependencies for deployment.</li>
+            </ul>
+            <h3>Challenges faced</h3>
+            <ul>
+              <li>Template Inheritance: Setting up a clean base.html with header/footer and
+                extending it in multiple pages.</li>
+              <li>Static File Handling: Ensuring CSS, JS, and images load correctly through Flask’s url_for.</li>
+              <li>Data Handling: Managing café details without using a full SQLAlchemy database (opted for dictionaries/JSON for simplicity).</li>
+            </ul>
+            <h3>What I Learned</h3>
+            <ul>
+              <li>How to structure a Flask project for scalability.</li>
+              <li>The importance of modular templates (header.html, footer.html, base.html) for reusability.</li>
+              <li>Handling static files properly with Flask.</li>
+              <li>Using Bootstrap effectively to make a responsive, user-friendly UI.</li>
+            </ul>
+             <h3>Future Development</h3>
+              <ul>
+                <li>Add a search and filter option (by location, Wi-Fi speed, or seating).</li>
+                <li>Implement user reviews & ratings.</li>
+                <li>Switch from dictionary/JSON data to a database (SQLite/PostgreSQL) for dynamic storage.</li>
+                <li>Integrate Google Maps API for café location visualization.</li>
+              </ul>
+          </div><!-- /.blog-post -->
+
+          <nav class="blog-pagination">
+            <a class="btn btn-outline-primary" href="#">Older</a>
+            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">Key Features</h4>
+            <ul>
+              <li>Café Listings – Find cafés suitable for remote work.</li>
+              <li>Wi-Fi Availability – Shows which cafés provide reliable internet.</li>
+              <li>Socket Count – Number of power outlets available for laptops and devices.</li>
+              <li>Seating Capacity – Number of tables or seats for comfortable working.</li>
+              <li>Location Details – Address, map, and directions to the café.</li>
+            </ul>
           </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="static/assets/img/product-cycle.png" class="card-img-top" alt="Thumbnail">
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
+
+          <div class="p-3">
+            <a href="#" class="btn active" role="button" aria-pressed="true">Vist Github repository</a>
           </div>
-          <div class="col mb-4">
-            <div class="card shadow-sm">
-              <img src="static/assets/img/product-car.avif" class="card-img-top" alt="Thumbnail">
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card shadow-sm">
-              <img src="static/assets/img/product-car.avif" class="card-img-top" alt="Thumbnail">
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card shadow-sm">
-              <img src="static/assets/img/product-car.avif" class="card-img-top" alt="Thumbnail">
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card shadow-sm">
-              <img src="static/assets/img/product-car.avif" class="card-img-top" alt="Thumbnail">
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
+        </aside><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+    </main>
 </section>
 
 

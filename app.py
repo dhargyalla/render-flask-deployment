@@ -36,15 +36,15 @@ def about():
 
 @app.route("/portfolio", methods=['GET'])
 def portfolio():
-    return render_template('portfolio.html')
+    return render_template('webdev.html')
 
-@app.route("/project1", methods=['GET'])
+@app.route("/website1", methods=['GET'])
 def project1():
     return render_template('project1.html')
 
-@app.route("/webdev", methods=['GET'])
-def webapp():
-    return render_template('webdev.html')
+# @app.route("/webdev", methods=['GET'])
+# def webapp():
+#     return render_template('webdev.html')
 
 @app.route("/contact", methods=['GET', 'POST'])
 def contact():
