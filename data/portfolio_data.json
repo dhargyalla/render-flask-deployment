@@ -1,0 +1,73 @@
+{
+  "webdev": {
+    "heading": "Web Development & Applications",
+    "subheading": "Full-stack web projects built with Flask, WordPress, and Bootstrap.",
+    "cards": [
+      {
+        "image": "assets/img/webdev_thumbnail.png",
+        "description": "This is web application build with flask framework. This application manages different cafes recommended by the users based on the remote work friendly.",
+        "tags": ["Python", "Flask", "Bootstrap", "SQL"],
+        "link": "https://github.com/dhargyalla/Tech-Haven-Cafe",
+        "link_text": "GitHub Repo",
+        "time": "9 mins"
+    },
+    {
+        "image": "assets/img/ykf_thumbnail.png",
+        "description": "This website is built on WordPress, customized with the Bootstrap framework, and hosted on Hostinger. It uses various WordPress-compatible plugins for functionality.",
+        "tags": ["HTML", "Wordpress", "Bootstrap", "CSS"],
+        "link": "https://yamunakhimtsang.org/",
+        "link_text": "Visit Site",
+        "time": "5 mins"
+    },
+    {
+        "image": "assets/img/tibetartsandhealing.png",
+        "description": "Revamped and managed a Shopify store, maintained the catalogue, ran Mailchimp and social media ads, and tracked performance with Google and Facebook Analytics.",
+        "tags": ["Shopify", "MailChimp", "Facebook Analytics", "Google Analytics"],
+        "link": "https://www.tibetartsandhealing.com/",
+        "link_text": "Visit Site",
+        "time": "5 mins"
+    },
+    {
+        "image": "assets/img/tibetanmedicines.png",
+        "description": "Developed a CMS website using WordPress and customized it with the Bootstrap framework.",
+        "tags": ["Wordpress", "Bootstrap", "Facebook Analytics"],
+        "link": "https://tibetmedicines.com/",
+        "link_text": "Visit Site",
+        "time": "5 mins"
+    },
+    {
+        "image": "assets/img/jobportal_thumbnail.png",
+        "description": "Developed the website using the Flask framework, with SQLAlchemy for database management and Flask-Bootstrap for front-end design.",
+        "tags": ["Flask", "Flask-Bootstrap", "SQLAlchemy"],
+        "link": "https://github.com/dhargyalla/Job-application-portal",
+        "link_text": "Github repo",
+        "time": "5 mins"
+    },
+    {
+        "image": "assets/img/bodrigpa_thumbnail.png",
+        "description": "Developed a CMS website using WordPress and customized it with the Bootstrap framework.",
+        "tags": ["Wordpress", "Bootstrap", "Plugins"],
+        "link": "https://bodrigpa.org/",
+        "link_text": "Visit Site",
+        "time": "5 mins"
+    }
+    ]
+  },
+
+  "data": {
+    "heading": "Data Analytics Projects",
+    "subheading": "Explore insights and case studies using Python, Tableau, and SQL.",
+    "cards": [
+      {
+        "image": "assets/img/customer_behavior_analysis.png",
+        "description": "How can the company leverage consumer shopping data to identify trends, improve customer engagement, and optimize marketing and product strategies?",
+        "tags": ["Python", "SQL", "Tableau"],
+        "link": "https://github.com/dhargyalla/customer-behavior-analysis",
+        "link_text": "GitHub Repo",
+        "portfolio_1_link": "http://127.0.0.1:5000/customer_behavior",
+        "portfolio_1_link_text": "Read more",
+        "time": "8 mins"
+      }
+    ]
+  }
+}

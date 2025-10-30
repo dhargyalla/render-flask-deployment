@@ -7,99 +7,101 @@
 <section class="pt-5 pt-md-11 py-3 pt-5 ">  <!-- blog title section -->
       <div class="container pt-5">
             <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-              <div class="col-md-6 px-0">
-                <h1 class="display-4 font-italic">Wifi and Cafe Finder</h1>
-                <p class="lead my-3">
-                  This website is very helpful for people who work from home. Visitors can
-                  find cafés listed with details such as the number of sockets,
-                  available tables, and the café’s location.
-                </p>
+              <!-- Project Title -->
+              <div class="text-center mb-5">
+                <h2 class="fw-bold">🛍️ Customer Shopping Behavior Analysis</h2>
+                <p>Investigating customer shopping behavior using transactional data to drive insights and recommendations.</p>
               </div>
             </div>
       </div> <!-- / .container -->
 </section>
 
-<section>
-    <main role="main" class="container">
+<section id="customer-behavior-analysis" class="py-5">
+  <div class="container">
+
+    <!-- Overview -->
+    <div class="mb-5">
+      <h4 class="fw-semibold">📘 Overview</h4>
+      <p>This data analytics project investigates customer shopping behavior using transactional data from 3,900 purchases across multiple product categories. The goal is to uncover insights into spending patterns, customer segmentation, product preferences, and subscription behaviors to support data-driven marketing and product strategies.</p>
+      <p><strong>Key Business Question:</strong> “How can the company leverage consumer shopping data to identify trends, improve customer engagement, and optimize marketing and product strategies?”</p>
+    </div>
+
+    <!-- Datasets -->
+    <div class="mb-5">
+      <h4 class="fw-semibold">📂 Datasets</h4>
+      <p><strong>Source:</strong> POS System | <strong>File:</strong> customer_shopping_behavior.csv | <strong>Rows:</strong> 3,900 | <strong>Columns:</strong> 18</p>
+      <ul>
+        <li><strong>Customer Demographics:</strong> age, gender, location, subscription status</li>
+        <li><strong>Purchase Details:</strong> item purchased, category, purchase amount, size, color, season</li>
+        <li><strong>Behavioral Data:</strong> discount applied, previous purchases, frequency, review rating, shipping type</li>
+      </ul>
+      <p><strong>Data Quality Summary:</strong> Missing Values: 37 (in review ratings). Data types cleaned and standardized for consistency.</p>
+    </div>
+
+    <!-- Tools & Technologies -->
+    <div class="mb-5">
+      <h4 class="fw-semibold">🧰 Tools & Technologies</h4>
       <div class="row">
-        <div class="col-md-8 blog-main">
-          <div class="blog-post">
-            <h2 class="blog-post-title">Project Overview</h2>
-            <p class="blog-post-meta">January 12, 2024 by Tsering</p>
-            <hr>
-            <p>
-              This project is a web application designed for remote workers and students looking
-              for work-from-home friendly cafés. It helps users easily discover coffee shops
-              with reliable Wi-Fi, available seating, and essential amenities to create a
-              productive work environment outside the home.
-            </p>
-            <h3>Tech Stack</h3>
-            <ul>
-              <li>Backend: Flask (Python)</li>
-              <li>Frontend: Bootstrap (responsive UI)</li>
-              <li>Database: SQL (SQLite during development)</li>
-              <li>Extras: Jinja templates, simple slugged URLs for SEO-friendly links</li>
-            </ul>
-            <h3>Modular Architecture</h3>
-            <ul>
-              <li>app.py – main application file that defines routes.</li>
-              <li>templates/ – contains HTML files (index.html, about.html,
-                portfolio.html, project1.html, etc.) with reusable layouts
-                (header.html, footer.html, base.html).</li>
-              <li>static/ – contains CSS, JS, and images for styling.</li>
-              <li>.env – stores environment variables.</li>
-              <li>requirements.txt – lists dependencies for deployment.</li>
-            </ul>
-            <h3>Challenges faced</h3>
-            <ul>
-              <li>Template Inheritance: Setting up a clean base.html with header/footer and
-                extending it in multiple pages.</li>
-              <li>Static File Handling: Ensuring CSS, JS, and images load correctly through Flask’s url_for.</li>
-              <li>Data Handling: Managing café details without using a full SQLAlchemy database (opted for dictionaries/JSON for simplicity).</li>
-            </ul>
-            <h3>What I Learned</h3>
-            <ul>
-              <li>How to structure a Flask project for scalability.</li>
-              <li>The importance of modular templates (header.html, footer.html, base.html) for reusability.</li>
-              <li>Handling static files properly with Flask.</li>
-              <li>Using Bootstrap effectively to make a responsive, user-friendly UI.</li>
-            </ul>
-             <h3>Future Development</h3>
-              <ul>
-                <li>Add a search and filter option (by location, Wi-Fi speed, or seating).</li>
-                <li>Implement user reviews & ratings.</li>
-                <li>Switch from dictionary/JSON data to a database (SQLite/PostgreSQL) for dynamic storage.</li>
-                <li>Integrate Google Maps API for café location visualization.</li>
-              </ul>
-          </div><!-- /.blog-post -->
+        <div class="col-md-6">
+          <ul>
+            <li><strong>Data Handling:</strong> Python (pandas, numpy), Excel</li>
+            <li><strong>Data Exploration & Cleaning:</strong> Jupyter Notebook</li>
+            <li><strong>Database Management:</strong> SQLite</li>
+            <li><strong>Querying & Analysis:</strong> SQL</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li><strong>Data Visualization:</strong> Tableau</li>
+            <li><strong>Documentation & Reporting:</strong> PowerPoint, Word / PDF</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-          <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="#">Older</a>
-            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-          </nav>
+    <!-- Project Steps -->
+    <div class="mb-5">
+      <h4 class="fw-semibold">🔍 Project Steps</h4>
+      <ol>
+        <li><strong>Business Understanding:</strong> Defined 10 key business questions and analytical goals aligned with business strategy.</li>
+        <li><strong>Data Exploration (EDA):</strong> Loaded dataset into Python, conducted descriptive stats, visualized distributions.</li>
+        <li><strong>Data Cleaning & Preparation:</strong> Handled missing values, standardized columns, created new features, integrated dataset into SQLite.</li>
+        <li><strong>SQL-Based Analysis:</strong> Executed queries on revenue, high-spending users, top products, age-group revenue, subscriber vs non-subscriber spending.</li>
+        <li><strong>Insight Generation:</strong> Key findings include female customers driving 68% of revenue, loyal customers dominating sales, top-rated products identified.</li>
+        <li><strong>Data Visualization:</strong> Developed interactive Tableau dashboard for revenue, segmentation, product trends, and subscription analysis.</li>
+        <li><strong>Recommendations:</strong> Boost subscriptions, reward repeat buyers, optimize discounts, targeted marketing for high-performing demographics.</li>
+      </ol>
+    </div>
 
-        </div><!-- /.blog-main -->
+    <!-- Deliverables -->
+    <div class="mb-5">
+      <h4 class="fw-semibold">📦 Project Deliverables</h4>
+      <ul>
+        <li>Customer_Shopping_Behavior_EDA.ipynb - Python notebook for data loading, cleaning, and exploration</li>
+        <li>customer_shopping_behavior.csv - Raw dataset</li>
+        <li>customer_analysis_queries.sql - SQL queries addressing business questions</li>
+        <li>Customer_Shopping_Behavior_Dashboard.twbx - Interactive Tableau dashboard</li>
+        <li>Customer_Shopping_Behavior_Report.pdf - Final analytical report with insights & recommendations</li>
+        <li>Customer_Shopping_Behavior_Presentation.pptx - Business presentation summarizing key findings</li>
+        <li>customer.csv - Clean dataset for SQL analytics</li>
+      </ul>
+    </div>
 
-        <aside class="col-md-4 blog-sidebar">
-          <div class="p-3 mb-3 bg-light rounded">
-            <h4 class="font-italic">Key Features</h4>
-            <ul>
-              <li>Café Listings – Find cafés suitable for remote work.</li>
-              <li>Wi-Fi Availability – Shows which cafés provide reliable internet.</li>
-              <li>Socket Count – Number of power outlets available for laptops and devices.</li>
-              <li>Seating Capacity – Number of tables or seats for comfortable working.</li>
-              <li>Location Details – Address, map, and directions to the café.</li>
-            </ul>
-          </div>
+    <!-- How to Run -->
+    <div>
+      <h4 class="fw-semibold">▶️ How to Run This Project</h4>
+      <ol>
+        <li>Clone the repository: <code>git clone https://github.com/yourusername/customer-shopping-behavior-analysis.git</code></li>
+        <li>Install dependencies: <code>pip install pandas numpy matplotlib sqlite3</code></li>
+        <li>Run the Jupyter Notebook: <code>jupyter notebook Customer_Shopping_Behavior_EDA.ipynb</code></li>
+        <li>Load data into SQLite and execute SQL queries from <code>customer_analysis_queries.sql</code></li>
+        <li>Open Tableau dashboard: <code>Customer_Shopping_Behavior_Dashboard.twbx</code></li>
+      </ol>
+    </div>
 
-          <div class="p-3">
-            <a href="#" class="btn active" role="button" aria-pressed="true">Vist Github repository</a>
-          </div>
-        </aside><!-- /.blog-sidebar -->
-
-      </div><!-- /.row -->
-    </main>
+  </div>
 </section>
+
 
 
 

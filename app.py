@@ -4,6 +4,8 @@ from flask import Flask, render_template,request, redirect, flash
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
 import os
+import json
+
 
 load_dotenv()  # Ensure this is called early in the script
 app = Flask(__name__)
@@ -34,11 +36,32 @@ def home():
 def about():
     return render_template('about.html')
 
-@app.route("/portfolio", methods=['GET'])
-def portfolio():
-    return render_template('webdev.html')
+# Helper function to load JSON data
+def load_portfolio_data():
+    with open("data/portfolio_data.json", "r", encoding="utf-8") as f:
+        return json.load(f)
 
-@app.route("/website1", methods=['GET'])
+@app.route("/portfolio")
+def portfolio():
+    data = load_portfolio_data()["webdev"]
+    return render_template(
+        "webdev.html",
+        heading=data["heading"],
+        subheading=data["subheading"],
+        cards=data["cards"]
+    )
+
+@app.route("/data")
+def data_portfolio():
+    data = load_portfolio_data()["data"]
+    return render_template(
+        "data-portfolio.html",
+        heading=data["heading"],
+        subheading=data["subheading"],
+        cards=data["cards"]
+    )
+
+@app.route("/customer_behavior", methods=['GET'])
 def project1():
     return render_template('project1.html')
 
