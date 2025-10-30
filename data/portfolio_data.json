@@ -64,8 +64,6 @@
         "tags": ["Python", "SQL", "Tableau"],
         "link": "https://github.com/dhargyalla/customer-behavior-analysis",
         "link_text": "GitHub Repo",
-        "portfolio_1_link": "http://127.0.0.1:5000/customer_behavior",
-        "portfolio_1_link_text": "Read more",
         "time": "8 mins"
       }
     ]
