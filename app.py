@@ -28,6 +28,10 @@ mail = Mail(app)
 # bootstrap = Bootstrap4(app)
 bootstrap = Bootstrap5(app)
 
+@app.route("/health")
+def health():
+    return "OK", 200
+
 @app.route("/", methods=['GET'])
 def home():
     return render_template('index.html')
